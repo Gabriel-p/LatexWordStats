@@ -6,7 +6,9 @@ Display the percentage that each single word represents in a LaTeX document.
 
 The `-n` argument (required) passes the document's name, and the `-m` argument (optional, default is 20) the maximum number of unique words to be displayed.
 
-`$python LatexWordStats.py -n=document.tex -m=10`
+Run with:
+
+`$ python LatexWordStats.py -n=document.tex -m=10`
 
 which results in:
 
