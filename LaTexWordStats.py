@@ -52,9 +52,9 @@ def lenght_dist(wordcount):
     lenghts = [0 for _ in range(15)]
     for w, val in wordcount.items():
         if len(w) < 15:
-            lenghts[len(w) - 1] += len(w) * val
+            lenghts[len(w) - 1] += val
         else:
-            lenghts[14] += len(w) * val
+            lenghts[14] += val
     return lenghts
 
 
@@ -88,19 +88,21 @@ def main(f_name, max_w=20):
     lenghts = lenght_dist(wordcount)
     l_max = max(lenghts)
     for i, le in enumerate(lenghts):
-        l_p = int(round(le * 30. / l_max))
+        l_p = max(1, int(round(le * 30. / l_max)))
         print("{:2d}  ".format(i + 1) + "+" * l_p + " ({})".format(le))
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-n", required=True, type=str,
-                        help="Name of .tex file to process.")
-    parser.add_argument("-m", required=False, type=int,
-                        help="Maximum number of words displayed.")
-    args = parser.parse_args()
-    if args.m is not None:
-        main(args.n, args.m)
-    else:
-        main(args.n)
-
+    try:
+        parser = argparse.ArgumentParser()
+        parser.add_argument("-n", required=True, type=str,
+                            help="Name of .tex file to process.")
+        parser.add_argument("-m", required=False, type=int,
+                            help="Maximum number of words displayed.")
+        args = parser.parse_args()
+        if args.m is not None:
+            main(args.n, args.m)
+        else:
+            main(args.n)
+    except:
+        main("perren.tex", 10)
