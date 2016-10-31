@@ -93,16 +93,13 @@ def main(f_name, max_w=20):
 
 
 if __name__ == "__main__":
-    try:
-        parser = argparse.ArgumentParser()
-        parser.add_argument("-n", required=True, type=str,
-                            help="Name of .tex file to process.")
-        parser.add_argument("-m", required=False, type=int,
-                            help="Maximum number of words displayed.")
-        args = parser.parse_args()
-        if args.m is not None:
-            main(args.n, args.m)
-        else:
-            main(args.n)
-    except:
-        main("perren.tex", 10)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-n", required=True, type=str,
+                        help="Name of .tex file to process.")
+    parser.add_argument("-m", required=False, type=int,
+                        help="Maximum number of words displayed.")
+    args = parser.parse_args()
+    if args.m is not None:
+        main(args.n, args.m)
+    else:
+        main(args.n)
