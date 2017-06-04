@@ -24,19 +24,9 @@ Total number of words: 16536
   5.   304     (1.84%) - to
   6.   304     (1.84%) - for
   7.   241     (1.46%) - is
-  8.   176     (1.06%) - then
+  8.   176     (1.06%) - clusters
   9.   165     (1.00%) - by
- 10.   163     (0.99%) - are
- 11.   159     (0.96%) - with
- 12.   142     (0.86%) - this
- 13.   142     (0.86%) - values
- 14.   141     (0.85%) - fig
- 15.   138     (0.83%) - age
- 16.   134     (0.81%) - mass
- 17.   133     (0.80%) - mean
- 18.   128     (0.77%) - as
- 19.   122     (0.74%) - those
-Sum percentage: 32.2%
+Sum percentage: 23.7%
 
 Word lengths distribution:
  1  ++ (317)
