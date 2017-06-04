@@ -11,7 +11,8 @@ def read_file(f_name):
     all_words = []
     st_check = ("%", r"\begin{", r"\document", r"\use", r"\newco", r"\renew")
     not_word = (
-        "texttt", "textbf", "emph", "hline", "citet", "citep", "simeq", "www")
+        "texttt", "textbf", "emph", "hline", "citet", "citep", "simeq", "www",
+        "ref")
     with open(f_name) as f:
         data = f.read()
         for line in data.splitlines():
